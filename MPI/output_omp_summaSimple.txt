@@ -1,0 +1,2 @@
+Sum = 8002000
+El tiempo que tomo realizar la tarea fue 0.000247 segundos
