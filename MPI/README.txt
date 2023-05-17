@@ -41,7 +41,9 @@ Para MPI:
   el proceso al ser tan sencillo, la carga computacional no es demasiado grande, razón po la cual no hay significativas sino incluso perdidas a la hora de paralelizar el codigo, pues al demorarse
   tan poco en el proceso de compilación, la sobrecarga que conlleva el hecho de crear los hilos, coordinarlos y juntarlos o el tiempo entre comuncicaciones entre nodos y coordinacio de procesos
   hace que en paralelo el proceso se demore más que lo que se demoraria en código serial, sin emabrgo cabe recalcar que entre las dos opciones de paralelización es decir en openMP y MPI 
-  respectivaemnte o mejor dicho, memoria compartida y memoria distribuida, la que obtuvi mejores resultados fue la opción de memoria distribuida o MPI para todas las veces 
-  que se realizo el experimento, realizando la sumatoria con diferentes números.
+  respectivaemnte o mejor dicho, memoria compartida y memoria distribuida, la que obtuve mejores resultados fue la opción de memoria distribuida o MPI para todas las veces 
+  que se realizo el experimento, realizando la sumatoria con diferentes números con un número reducido de cores o nods por ejemplo 2, pero a meedida que se aumentaban los nodos
+  en la memoria distribuida, el rendimiento tendía a empeorar, por lo que para número de cores elevado como por ejemplo 8, la memoria compartida solia tener un mejor rendimiento que
+  el código en memoria distribuida, por último cabe aclarar que el código en OpenMP o de memoria compartida siempre se compilo y ejecuto con un número fijo de hilos, en este caso 4 hilos.
   
   Cabe agregar que aparte los codigos no solo se encuentran en el github sino también en mi usuario de guane salealc en una carpeta llamada igual que en el github es decir llamada MPI
