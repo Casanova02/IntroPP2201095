@@ -6,7 +6,16 @@ de la siguiente manera: 1+2+3+4.
 EL codigo de mpi_summaSimple.c nos muestra como se paraleliza el código original llamado summaSimple.c, adicionalmente el codigo se encuentra documentado explicando los pasos 
 realizados para la correcta paralelización del código usando MPI.
 
-Para ejecutar el codigo en mi maquina local hago us de gcc y utilizo el comando: gcc -fopenmp omp_summaSimple.c -o omp_summaSimple
+Para ejecutar el codigo en mi maquina local hago uso de gcc y utilizo los siguientes comandos comando: 
+
+Para C normal:
+  gcc summaSimple.c -o summaSimpleSerial y despues se usa el comando ./summaSimpleSerial
+
+Para openMP: 
+  gcc -fopenmp omp_summaSimple.c -o omp_summaSimple  y despues se usa el comando ./omp_summaSimple
+
+Para MPI:
+  mpicc mpi_summaSimple.c -o mpi_summaSimple y despues se usa el comando mpirun -n "numeroDeCores" ./mpi_summaSimple
 
 Para ejecutar el codigo en el cluster GUANE hago uso de la reserva interactiva usando el comando: srun -n4 --pty /bin/bash ,y despues compilo con: gcc -fopenmp omp_summaSimple.c -o omp_summaSimple -lm
 aunque tambien se puede usar el archivo bash usando el comando: ./summaSimple.sbatch
