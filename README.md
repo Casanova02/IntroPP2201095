@@ -3,3 +3,5 @@
 En este repositorio se almacenaran los archivos de la clase de introduccion a la computacion paralela
 
 En la carpeta OpenMP se encuentran los archivos correspondientes al primer parcial
+
+En la carpeta MPI se encuentra los archivos correspondientes al segundo parcial
