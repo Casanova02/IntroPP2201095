@@ -19,7 +19,7 @@ __global__ void sumParallel(int *dev_sum, int num)
     while (tid <= num)
     {
 
-	/* se usa la función  atomicAdd para garantizar que varios hilos no vayan a escribir simultáneamente en la misma ubicación de memoria. */
+	/* se usa la función atomicAdd para realizar la sumatoria y  garantizar que varios hilos no vayan a escribir simultáneamente en la misma ubicación de memoria. */
         atomicAdd(dev_sum, tid);
         tid += stride; //coge el identificado unico de cada hilo y le agrega el paso para pasar al siguiente hilo
     }
@@ -29,6 +29,8 @@ int main()
 {
     int num, sum = 0;
     int *dev_sum; //referencia de la variable que se ubicara en el device
+
+    /*Inicializamos las variables con las cuales tomaremos el tiempo */
     cudaEvent_t start, stop;
     float elapsedTime;
 
@@ -44,11 +46,11 @@ int main()
 
     cudaEventCreate(&start);
     cudaEventCreate(&stop);
-    cudaEventRecord(start, 0);
+    cudaEventRecord(start, 0); //comienza a tomar el tiempo
 
     sumParallel<<<gridSize, blockSize>>>(dev_sum, num); //invocamos el kernel sumParallel que es el que se encarga de realizar la suma
 
-    cudaEventRecord(stop, 0);
+    cudaEventRecord(stop, 0); //para de tomar el tiempo
     cudaEventSynchronize(stop);
     cudaEventElapsedTime(&elapsedTime, start, stop);
 
@@ -57,7 +59,7 @@ int main()
 
     printf("\nSum = %d\n", sum); //imprimimos el resultado de la suma
 
-    printf("Elapsed Time: %.6f ms\n", elapsedTime);
+    printf("Elapsed Time: %.6f segundos\n", elapsedTime/1000); //me imprime el tiempo que demoro
 
     cudaEventDestroy(start);
     cudaEventDestroy(stop);
