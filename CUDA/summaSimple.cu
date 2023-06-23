@@ -1,15 +1,19 @@
 #include <stdio.h>
+#include <cuda.h>
 
 __global__ void sumParallel(int *dev_sum, int num)
 {
     int tid = threadIdx.x + blockIdx.x * blockDim.x;
     int stride = blockDim.x * gridDim.x;
+    int localSum = 0;
 
     while (tid <= num)
     {
-        atomicAdd(dev_sum, tid);
+        localSum += tid;
         tid += stride;
     }
+
+    atomicAdd(dev_sum, localSum);
 }
 
 int main()
