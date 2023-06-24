@@ -5,6 +5,8 @@
 * Cristhian Ivan Tristancho Corzo - 2192532
 * Santiago Leal Casanova - 2201095
 
+### Datos a tener en cuenta:
+
 En la presenta carpeta se encuentran los archivos correspondientes al tercer parcial que coresponde al uso de la programación en gpus usando CUDA.
 
 En esta carpeta no solo se encuentran los codigos en CUDA con sus respectivos resultados, sino que también se encuentran los códigos y los resultados de los códigos en OMP y MPI, esto con el motivo de 
