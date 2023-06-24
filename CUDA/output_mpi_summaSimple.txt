@@ -1,0 +1,2 @@
+La suma es igual a: 55 
+El tiempo de ejecucion es: 0.000033 segundos 
