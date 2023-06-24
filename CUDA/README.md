@@ -1,9 +1,9 @@
 # Parcial 3 - procesamiento memoria híbrida CPU-GPU
 
 ## Integrantes del grupo: 
-##  * Anderson Yeseth Acuña Vargas - 2191965
-##  * Cristhian Ivan Tristancho Corzo - 2192532
-##  * Santiago Leal Casanova - 2201095
+* Anderson Yeseth Acuña Vargas - 2191965
+* Cristhian Ivan Tristancho Corzo - 2192532
+* Santiago Leal Casanova - 2201095
 
 En la presenta carpeta se encuentran los archivos correspondientes al tercer parcial que coresponde al uso de la programación en gpus usando CUDA.
 
