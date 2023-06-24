@@ -1,4 +1,7 @@
-# Parcial 3 - programación hibrida CPU-GPU
+# Parcial 3 - procesamiento memoria híbrida CPU-GPU
+
+## Integrantes del grupo: 
+  * Anderson
 
 En la presenta carpeta se encuentran los archivos correspondientes al tercer parcial que coresponde al uso de la programación en gpus usando CUDA.
 
