@@ -1,1 +1,4 @@
-En esta ocasion se usaron codigos de cuda
+En la presenta carpeta se encuentran los archivos correspondientes al tercer parcial que coresponde al uso de la programación en gpus usando CUDA.
+
+En esta carpeta no solo se encuentran los codigos en CUDA con sus respectivos resultados, sino que también se encuentran los códigos y los resultados de los códigos en OMP y MPI, esto con el motivo de 
+comparar los resultados de las tres alternativas, OMP, MPI Y GPU
