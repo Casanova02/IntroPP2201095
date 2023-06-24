@@ -1,4 +1,10 @@
 En la presenta carpeta se encuentran los archivos correspondientes al tercer parcial que coresponde al uso de la programación en gpus usando CUDA.
 
 En esta carpeta no solo se encuentran los codigos en CUDA con sus respectivos resultados, sino que también se encuentran los códigos y los resultados de los códigos en OMP y MPI, esto con el motivo de 
-comparar los resultados de las tres alternativas, OMP, MPI Y GPU
+comparar los resultados de las tres alternativas, OMP, MPI Y GPU.
+
+Tambien cabe recalcar que cada codigo de cuda cuenta con su respectivo sbatch para su ejecución en el cluster, y para ejecutarlo en maquinas locales se realiza de manera manual compilando el codigo con
+el comando nvcc codigoCuda.cu -o ejecutable con lo que se genera el binario y se ejecuta usando la instrucción ./ejecutable.
+
+Ahora bien, pasando a los resultados, cabe mencionar que entre los dos codigos,es decir entre la suma simple y el trapecio, en su implementación en CUDA el que tuvo mejor rendimiento es el de suma simple.
+siendo el que menos se demoraba en ejecutar de ambos
