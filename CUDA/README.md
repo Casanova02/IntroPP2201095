@@ -1,4 +1,4 @@
-# Parcial 3 - procesamiento memoria híbrida CPU-GPU
+# Parcial 3 - Grupo 2 - procesamiento memoria híbrida CPU-GPU
 
 ## Integrantes del grupo: 
 * Anderson Yeseth Acuña Vargas - 2191965
