@@ -6,6 +6,8 @@ comparar los resultados de las tres alternativas, OMP, MPI Y GPU.
 Tambien cabe recalcar que cada codigo de cuda cuenta con su respectivo sbatch para su ejecución en el cluster, y para ejecutarlo en maquinas locales se realiza de manera manual compilando el codigo con
 el comando nvcc codigoCuda.cu -o ejecutable con lo que se genera el binario y se ejecuta usando la instrucción ./ejecutable.
 
+Adicionalmente es bueno tener en cuenta que el codigo del trapecio en CUDA no cuenta con un archivo txt donde me muestra los resultados sino que al ejecutar el sbatch es cuando obtengo la lista de resultados.
+
 Ahora bien, pasando a los resultados, cabe mencionar que entre los dos codigos,es decir entre la suma simple y el trapecio, en su implementación en CUDA el que tuvo mejor rendimiento es el de suma simple.
 siendo el que menos se demoraba en ejecutar de ambos, además cabe mencionar que la escalabilidad de los codigos de CUDA  es muy buena, pues apesar de aumentar el número de sumatorias en el caso de summa
 simple o del limite    de la integral y sus particiones en el caso del codigo del trapecio, los tiempos de ejecución tenian tiempos bastantes similares, lo que deja ver el potencial de CUDA en el sentido
